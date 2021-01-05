@@ -1,1 +1,0 @@
-{"firstName":"Marko","lastName":"Dumnic","city":"Herceg Novi","good":"Good","wish":"Hehe","date":"05.01.2021 21:04"}
