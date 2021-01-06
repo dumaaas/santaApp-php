@@ -18,9 +18,10 @@
     }
 
     //funkcija za citanje zelja
-    function readFromDB() {
+    function readFromDB($param) {
         global $db_folder;
         $wishes = array();
+        $wishesGood = array();
 
         //ukoliko ne postoji direktorijum - prikazemo gresku
         //ukoliko postoji, pomocu funkcije scandir pronadjemo sve fajlove koji se nalaze u njemu
@@ -38,13 +39,27 @@
                 $wish_json = fread($fp, filesize($db_folder.'/'.$file));
                 $wish = json_decode($wish_json, true);
                 $wish += ["fileName" => $file];
-                $wishes[] = $wish;
+
+                //ukoliko je korisnik izabrao 'Good' ili 'Bad' opciju u selectu dodavamo u niz $wishesGood samo zeljene elemente
+                //ukoliko je tek usao na stranicu ili izabrao 'All' sve zelje se dodavaju u niz $wishes
+                if($wish['good'] == $param) {
+                    $wishesGood[] = $wish;
+                } else {
+                    $wishes[] = $wish;
+                }
+
                 fclose($fp);
             }
 
+            //na osnovu toga da li je korisnik tek usao na stranicu ili izabrao odredjenu opciju u selectu vracemo odgovarajuce rezultate
             //poziva se funkcija za sortiranje niza zelja
-            usort($wishes, 'date_compare');
-            return $wishes;
+            if($param == 'All') {
+                usort($wishes, 'date_compare');
+                return $wishes;
+            } else {
+                usort($wishesGood, 'date_compare');
+                return $wishesGood;
+            }
         }
     }
 

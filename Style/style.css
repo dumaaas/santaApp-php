@@ -7,6 +7,17 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'A Gentle Touch';
+    src: url('../Fonts/AGentleTouch.woff2') format('woff2'),
+    url('../Fonts/AGentleTouch.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 body {
     width: 100%;
     height: auto;
@@ -27,16 +38,18 @@ i {
     font-size: 60px;
 }
 
-table {
-    margin-top: 5%;
-}
-
 thead {
     color: white;
+    font-family: "Courier New";
 }
 
 tbody {
     color:gold;
+    font-family: "Courier New";
+}
+
+.container {
+    position: relative;
 }
 
 .row {
@@ -88,6 +101,13 @@ tbody {
     height: 520px;
 }
 
+.letterImg {
+    margin-left: 9%;
+    margin-top: 9%;
+    width: 80%;
+    height: 80vh;
+}
+
 .wish-sent {
     text-align: center;
     color: white;
@@ -95,9 +115,31 @@ tbody {
     font-size: 8vh;
 }
 
+.wish-list-form {
+    width: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 38%;
+    color: white;
+    font-family: "Courier New";
+}
+
+.wish-list-btn {
+    width: 100%;
+}
+
+.total-results {
+    font-family: "Courier New";
+    font-size: 18px;
+    color: gold;
+    text-align: left;
+    margin-bottom: 1%;
+}
+
 .trash {
-    margin-left: 20%;
     font-size: 20px;
+    text-align: center;
+    margin: 0;
 }
 
 .snowflake {
@@ -106,6 +148,77 @@ tbody {
     font-family: Arial;
     text-shadow: 0 0 1px #000;
 }
+
+.letter-first {
+    position: absolute;
+    top: 34%;
+    left: 19%;
+    font-size: 170%;
+    font-family: A Gentle Touch;
+}
+
+.letter-second {
+    position: absolute;
+    top: 41%;
+    left: 19%;
+    font-size: 170%;
+    font-family: A Gentle Touch;
+}
+
+.letter-third {
+    position: absolute;
+    top: 48%;
+    left: 19%;
+    font-size: 170%;
+    font-family: A Gentle Touch;
+}
+
+.letter-fourth {
+    position: absolute;
+    top: 55%;
+    left: 19%;
+    font-size: 170%;
+    font-family: A Gentle Touch;
+}
+
+.letter-fifth {
+    position: absolute;
+    top: 88%;
+    left: 41%;
+    font-size: 170%;
+    font-family: A Gentle Touch;
+}
+
+.letter-sixth {
+    position: absolute;
+    top: 88%;
+    left: 65%;
+    font-size: 190%;
+    font-family: A Gentle Touch;
+}
+
+.letter-sixth i {
+    font-size: 300%;
+    color: green;
+}
+
+.letter-seventh {
+    position: absolute;
+    top: 88%;
+    left: 70%;
+    font-size: 190%;
+    font-family: A Gentle Touch;
+}
+
+.letter-seventh i {
+    font-size: 300%;
+    color: red;
+}
+
+
+
+
+
 
 @keyframes snowflakes-fall {
     0% {

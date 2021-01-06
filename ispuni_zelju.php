@@ -21,3 +21,4 @@ if($_SERVER['REQUEST_METHOD'] == "GET") {
     $e = new Exception('Error', 222);
     echo '<h1>'.$e->getCode().' '.$e->getMessage().'</h1>';
 }
+

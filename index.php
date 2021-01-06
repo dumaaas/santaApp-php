@@ -2,7 +2,7 @@
 
 <?php
     $cities = ['Andrijevica', 'Bar', 'Berane', 'Bijelo Polje', 'Budva', 'Cetinje', 'Danilovgrad', 'Herceg Novi', 'Kolašin', 'Kotor',
-        'Mojkovac', 'Nikšić', 'Plav', 'Plužine', 'Pljevlja', 'Šavnik', 'Tivat', 'Ulcinj', 'Žabljak'];
+        'Mojkovac', 'Nikšić', 'Plav', 'Plužine', 'Pljevlja', 'Podgorica', 'Šavnik', 'Tivat', 'Ulcinj', 'Žabljak'];
 ?>
 
 <div class="container">
