@@ -37,6 +37,7 @@
                 $fp = fopen($db_folder.'/'.$file, 'r');
                 $wish_json = fread($fp, filesize($db_folder.'/'.$file));
                 $wish = json_decode($wish_json, true);
+                $wish += ["fileName" => $file];
                 $wishes[] = $wish;
                 fclose($fp);
             }

@@ -95,6 +95,11 @@ tbody {
     font-size: 8vh;
 }
 
+.trash {
+    margin-left: 20%;
+    font-size: 20px;
+}
+
 .snowflake {
     color: #fff;
     font-size: 3em;

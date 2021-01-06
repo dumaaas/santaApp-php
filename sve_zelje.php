@@ -22,6 +22,8 @@
                     <th scope="col">Good?</th>
                     <th scope="col">Wish</th>
                     <th scope="col">Date</th>
+                    <th scope="col">Fulfilled?</th>
+                    <th scope="col">Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -34,6 +36,21 @@
                             <td><?php echo $wish['good']; ?></td>
                             <td><?php echo $wish['wish']; ?></td>
                             <td><?php echo $wish['date']; ?></td>
+                            <?php if($wish['fulfilled'] == "Nope") { ?>
+                            <td><i class="fa fa-times trash" aria-hidden="true"></i></td>
+                            <?php } else { ?>
+                            <td><i class="fas fa-check trash"></i></td>
+                            <?php } ?>
+                            <td>
+                                <?php if($wish['fulfilled'] == "Nope") { ?>
+                                    <a href="ispuni_zelju.php?fulfill='<?php echo $wish['fileName']  ?>'"
+                                        <i class="fas fa-check trash"></i>
+                                    </a>
+                                <?php }  ?>
+                                <a href="delete_file.php?delete='<?php echo $wish['fileName'] ?>'"
+                                    <i class="fas fa-trash-alt trash"></i>
+                                </a>
+                            </td>
                         </tr>
                     <?php } ?>
                 </tbody>
@@ -43,7 +60,6 @@
             <img src="Images/santa.png" class="treeImg" alt="ChristmasTree">
             <p>NO NEW WISHES!</p>
         <?php } ?>
-    </div>
 
 <?php include('footer.php'); ?>
 

@@ -58,10 +58,6 @@
                 <img src="Images/jelka.png" class="treeImg" alt="ChristmasTree">
             </div>
         </div>
-        <audio id="audio" autoplay loop>
-            <source src="Music/song.mp3">
-        </audio>
-    </div>
 
 <?php include('footer.php'); ?>
 

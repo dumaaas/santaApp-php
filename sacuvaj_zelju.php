@@ -22,7 +22,7 @@
             header("location: ./index.php");
         } else {
             //napravimo asocijativni niz koji predstavlja novu zelju
-            $new_wish = ['firstName' => $firstName, 'lastName' => $lastName, 'city' => $city, 'good' => $good, 'wish' => $wish, 'date' => date('d.m.Y H:i')];
+            $new_wish = ['firstName' => $firstName, 'lastName' => $lastName, 'city' => $city, 'good' => $good, 'wish' => $wish, 'date' => date('d.m.Y H:i'), 'fulfilled' => 'Nope'];
 
             //enkodujemo ga u json string
             $json_new_wish = json_encode($new_wish);
