@@ -1,5 +1,7 @@
 <?php
 
+    //otvorimo zeljeni fajl i sacuvamo njegove podatke u promjenjivoj $wish koju koristimo da ispisemo rezultate na stranici
+
     $db_folder = 'zelje_db';
     if(isset($_GET['open'])) {
         $file = trim($_GET['open'],"'");
