@@ -38,7 +38,7 @@
             This year I wish for <?php echo $wish['wish'] ?>!
         </div>
         <div class="letter-fifth">
-            <?php echo $wish['firstName'].' '.$wish['lastName'] ?>, <?php echo $wish['date'] ?>
+            <?php echo $wish['firstName'].' '.$wish['lastName'] ?>, <?php echo $wish['date'].'h' ?>
         </div>
         <?php if($wish['fulfilled'] == "Nope") { ?>
             <div class="letter-seventh">
