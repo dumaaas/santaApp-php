@@ -1,1 +1,1 @@
-{"firstName":"Ilija","lastName":"Dumnic","city":"Danilovgrad","good":"Good","wish":"love & peace.","date":"07.01.2021 00:49","fulfilled":"Nope"}
+{"firstName":"Ilija","lastName":"Dumnic","city":"Danilovgrad","good":"Good","wish":"love & peace.","date":"07.01.2021 00:49","fulfilled":"Yep"}

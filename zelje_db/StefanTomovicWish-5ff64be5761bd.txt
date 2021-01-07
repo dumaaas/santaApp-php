@@ -1,1 +1,1 @@
-{"firstName":"Stefan","lastName":"Tomovic","city":"Podgorica","good":"Bad","wish":"a new car.","date":"07.01.2021 00:46","fulfilled":"Nope"}
+{"firstName":"Stefan","lastName":"Tomovic","city":"Podgorica","good":"Bad","wish":"a new car.","date":"07.01.2021 00:46","fulfilled":"Yep"}

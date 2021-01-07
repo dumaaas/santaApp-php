@@ -1,1 +1,1 @@
-{"firstName":"Ivana","lastName":"Jova","city":"Tivat","good":"Good","wish":"corona to end.","date":"07.01.2021 00:50","fulfilled":"Nope"}
+{"firstName":"Ivana","lastName":"Jova","city":"Tivat","good":"Good","wish":"corona to end.","date":"07.01.2021 00:50","fulfilled":"Yep"}
