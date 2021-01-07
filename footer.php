@@ -1,7 +1,7 @@
 <!-- Svaka stranica sadrzi ovaj kod, pa da bi smanjili dupliranje koda, odvajamo ga u poseban fajl i includujemo ga u ostale -->
-        <audio id="audio" autoplay loop>
-            <source src="Music/song.mp3">
-        </audio>
+            <audio id="audio" autoplay loop>
+                <source src="Music/song.mp3">
+            </audio>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

@@ -48,6 +48,14 @@ tbody {
     font-family: "Courier New";
 }
 
+span {
+    padding: 3px;
+    background-color: black;
+    border-radius: 5px;
+    color: red;
+    font-size: 15px;
+}
+
 .container {
     position: relative;
 }
@@ -76,6 +84,7 @@ tbody {
     display: block;
     text-indent: 10px;
     color: white;
+    margin-bottom: 3px;
 }
 
 .wish-form select {
@@ -85,6 +94,7 @@ tbody {
     display: block;
     text-indent: 10px;
     color: white;
+    margin-bottom: 3px;
 }
 
 .wish-form textarea {
@@ -93,6 +103,7 @@ tbody {
     border: 0px;
     display: block;
     color: white;
+    margin-bottom: 3px;
 }
 
 .treeImg {

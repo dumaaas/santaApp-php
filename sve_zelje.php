@@ -28,16 +28,18 @@
         <form action="sve_zelje.php" class="wish-list-form">
                 <div class="form-group">
                     <select name="good" class="custom-select mr-sm-2 wish-select">
-                        <option value=" " selected disabled>Choose...</option>
-                            <option value="Good">
-                                Good
-                            </option>
-                            <option value="Bad">
-                                Bad
-                            </option>
-                            <option value="All">
-                                All
-                            </option>
+                        <option value=" " selected disabled>
+                            Choose...
+                        </option>
+                        <option value="Good">
+                            Good
+                        </option>
+                        <option value="Bad">
+                            Bad
+                        </option>
+                        <option value="All">
+                            All
+                        </option>
                     </select>
                 </div>
             <div class="form-group">
@@ -47,34 +49,69 @@
 
         <!-- Ukoliko folder sa zeljama nije prazan prikazemo tabelu sa zeljama -->
         <?php if(!empty($wishes)) { ?>
-            <p class="total-results"> Total results: <?php echo count($wishes) ?> </p>
+            <p class="total-results">
+                Total results: <?php echo count($wishes) ?>
+            </p>
             <table class="table table-hover">
                 <thead>
-                <tr>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">City</th>
-                    <th scope="col">Good?</th>
-                    <th scope="col">Wish</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Fulfilled?</th>
-                    <th scope="col">Action</th>
-                </tr>
+                    <tr>
+                        <th scope="col">
+                            First Name
+                        </th>
+                        <th scope="col">
+                            Last Name
+                        </th>
+                        <th scope="col">
+                            City
+                        </th>
+                        <th scope="col">
+                            Good?
+                        </th>
+                        <th scope="col">
+                            Wish
+                        </th>
+                        <th scope="col">
+                            Date
+                        </th>
+                        <th scope="col">
+                            Fulfilled?
+                        </th>
+                        <th scope="col">
+                            Action
+                        </th>
+                    </tr>
                 </thead>
                 <tbody>
                     <!-- Prodjemo kroz sve zelje i prikazujemo informacije jedne po jedne u tabeli -->
                     <?php foreach ($wishes as $wish) { ?>
                         <tr>
-                            <td><?php echo $wish['firstName']; ?></td>
-                            <td><?php echo $wish['lastName']; ?></td>
-                            <td><?php echo $wish['city']; ?></td>
-                            <td><?php echo $wish['good']; ?></td>
-                            <td><?php echo $wish['wish']; ?></td>
-                            <td><?php echo $wish['date']; ?></td>
+                            <td>
+                                <?php echo $wish['firstName']; ?>
+                            </td>
+                            <td>
+                                <?php echo $wish['lastName']; ?>
+                            </td>
+                            <td>
+                                <?php echo $wish['city']; ?>
+                            </td>
+                            <td>
+                                <?php echo $wish['good']; ?>
+                            </td>
+                            <td>
+                                <?php echo $wish['wish']; ?>
+                            </td>
+                            <td>
+                                <?php echo $wish['date']; ?>
+                            </td>
+
                             <?php if($wish['fulfilled'] == "Nope") { ?>
-                            <td style="text-align:center;"><i class="fa fa-times trash" aria-hidden="true"></i></td>
+                            <td style="text-align:center;">
+                                <i class="fa fa-times trash" aria-hidden="true"></i>
+                            </td>
                             <?php } else { ?>
-                            <td style="text-align:center;"><i class="fas fa-check trash"></i></td>
+                            <td style="text-align:center;">
+                                <i class="fas fa-check trash"></i>
+                            </td>
                             <?php } ?>
                             <td style="text-align:center;">
                                 <?php if($wish['fulfilled'] == "Nope") { ?>
@@ -96,7 +133,9 @@
         <?php } else { ?>
             <!-- Ukoliko je prazan ne prikazujemo tabelu, vec odgovarajucu poruku -->
             <img src="Images/santa.png" class="treeImg" alt="ChristmasTree">
-            <p>NO NEW WISHES!</p>
+            <p>
+                NO NEW WISHES!
+            </p>
         <?php } ?>
 
 <?php include('footer.php'); ?>
