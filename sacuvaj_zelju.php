@@ -5,41 +5,21 @@
     //provjerimo da li je request method = POST i ukoliko nije prikazemo gresku
     if($_SERVER['REQUEST_METHOD'] == "POST") {
 
-        //pokupimo potrebne informacije sa index.php
-        $firstName = $_POST['firstName'];
-        $lastName = $_POST['lastName'];
-        $wish = $_POST['wish'];
-
-        if(isset($_POST['city'])) {
-            $city = $_POST['city'];
-        }
-        if(isset($_POST['good'])) {
-            $good = $_POST['good'];
-        }
-
-        //Validacija - ukoliko neko od polja ne ispunjava trazene uslove dodamo ga u niz errors
         $errors = array();
 
+        //pokupimo potrebne informacije sa index.php i odmah dodamo u niz errors sve elemente koji su prazni
+        isset($_POST['firstName']) && ($_POST['firstName']) != '' ? $firstName = $_POST['firstName'] : $errors += ["firstNameErr1" => "First name can not be empty!"];
+        isset($_POST['lastName']) && ($_POST['lastName']) != '' ? $lastName = $_POST['lastName'] : $errors += ["lastNameErr1" => "Last name can not be empty!"];
+        isset($_POST['wish']) && ($_POST['wish']) != '' ? $wish = $_POST['wish'] : $errors += ["wishErr" => "Wish can not be empty!"];
+        isset($_POST['city']) && ($_POST['city']) != '' ? $wish = $_POST['city'] : $errors += ["cityErr" => "You must select city!"];
+        isset($_POST['good']) && ($_POST['good']) != '' ? $good = $_POST['good'] : $errors += ["goodErr" => "You must check one option!"];
+
+        //ukoliko firstName i lastName ne sadrze samo slova dodamo ih u niz errors
         if(!preg_match("/^[a-zA-Z ]*$/", $firstName)) {
             $errors += ["firstNameErr" => "Only letters allowed!"];
         }
         if(!preg_match("/^[a-zA-Z ]*$/", $lastName)) {
             $errors += ["lastNameErr" => "Only letters allowed!"];
-        }
-        if(empty($city)) {
-            $errors += ["cityErr" => "You must select city!"];
-        }
-        if(empty($wish)) {
-            $errors += ["wishErr" => "Wish can not be empty!"];
-        }
-        if(empty($good)) {
-            $errors += ["goodErr" => "You must check one option!"];
-        }
-        if(empty($firstName)) {
-            $errors += ["firstNameErr1" => "First name can not be empty!"];
-        }
-        if(empty($lastName)) {
-            $errors += ["lastNameErr1" => "Last name can not be empty!!"];
         }
 
         //ukoliko imamo gresaka, vratimo se na stranicu index.php sa greskama
